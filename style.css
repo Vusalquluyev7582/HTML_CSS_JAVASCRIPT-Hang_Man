@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #fff;
+    background-color: #3a444e;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+p {
+    font-size: 20px;
+}
+
+.container {
+    width: 450px;
+    height: 450px;
+    padding: 20px;
+    position: relative;
+}
+
+.qrafik {
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 4px;
+}
+
+.item {
+    display: none;
+}
+
+#wrong-letters {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+#popup-container {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0px;
+    right: 0;
+    /* bottom: 0; */
+    bottom: -250px;
+    left: 0;
+    display: none;
+}
+
+.popup {
+    background-color: green;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 350px;
+}
+
+#word {
+    display: flex;
+    position: absolute;
+    /* bottom: 10px; */
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.letter {
+    width: 25px;
+    height: 40px;
+    border-bottom: 3px solid yellow;
+    margin: 0 3px;
+    font-size: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#message {
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    padding: 10px 80px;
+    position: absolute;
+    bottom: -90px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: transform 0.4s ease-in-out;
+    -webkit-transition: transform 0.4s ease-in-out;
+    -moz-transition: transform 0.4s ease-in-out;
+    -ms-transition: transform 0.4s ease-in-out;
+    -o-transition: transform 0.4s ease-in-out;
+}
+
+#message.show {
+    transform: translateY(-80px);
+    -webkit-transform: translateY(-80px);
+    -moz-transform: translateY(-80px);
+    -ms-transform: translateY(-80px);
+    -o-transform: translateY(-80px);
+}
